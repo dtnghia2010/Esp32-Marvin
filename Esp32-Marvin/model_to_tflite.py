@@ -1,5 +1,8 @@
 import tensorflow as tf
 import numpy as np
+import subprocess
+
+
 
 training_spectrogram = np.load('training_spectrogram.npz')
 validation_spectrogram = np.load('validation_spectrogram.npz')
@@ -22,4 +25,7 @@ converter2.representative_dataset = representative_dataset_gen
 converter2.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
 tflite_quant_model = converter2.convert()
 open("converted_model.tflite", "wb").write(tflite_quant_model)
+
+command = "xxd -i converted_model.tflite > model_data.cc"
+subprocess.run(command, shell=True)
 
