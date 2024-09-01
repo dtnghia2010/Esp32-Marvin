@@ -1,0 +1,13 @@
+I. Train model
+    1. Download data from Drive
+    https://drive.google.com/drive/folders/1w7kXb7vrnvskqXk0UTfvNSG_NePUpvWd?usp=sharing
+    2. Open "train_model.py"
+    3. Edit the path corresponding to the downloaded data
+    4. Run the code
+
+II. Compress model
+    1. Open "model_to_tflite.py"
+    2. Edit the path corresponding to the trained model
+    3. Run the code
+
+III. THANK YOU :>>>
