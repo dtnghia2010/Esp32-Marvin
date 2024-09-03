@@ -203,4 +203,4 @@ tf.math.confusion_matrix(complete_train_Y, decision)
 decision = [1 if p > 0.95 else 0 for p in predictions]
 tf.math.confusion_matrix(complete_train_Y, decision)
 
-model2.save("fully_trained.model")
+model2.save("fully_trained.h5")
